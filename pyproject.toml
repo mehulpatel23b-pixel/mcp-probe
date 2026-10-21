@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-probe"
+version = "1.0.0"
+description = "Zero-dependency smoke-tester for MCP (Model Context Protocol) stdio servers: handshake, tool listing, and safe synthesized tool calls, with CI-friendly exit codes."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "Mehul Patel" }]
+keywords = ["mcp", "model-context-protocol", "testing", "smoke-test", "ci", "llm", "ai-agents"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+mcp-probe = "mcp_probe.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
