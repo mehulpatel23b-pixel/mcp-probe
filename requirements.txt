@@ -1,0 +1,3 @@
+# mcp-probe runs on the Python standard library only.
+# There are zero runtime dependencies -- this file exists so that
+# `pip install -r requirements.txt` is a no-op in CI pipelines that expect one.
